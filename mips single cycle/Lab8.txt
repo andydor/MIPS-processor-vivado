@@ -1,0 +1,26 @@
+Dorofte Andrei, grupa 302210
+
+Am generat fisierul bit cu succes. Am corectat ce mi-ati indicat pe moodle. Nu am placuta pentru a testa.
+Instructiunile pe care le-am ales sunt:
+
+1. XOR $d, $s, $t (rd <- rs XOR rt, PC <- PC + 1) - sau-exclusiv
+
+XOR $5, $1, $2 -> B"000_001_010_101_0_110"
+
+2. SRA $d, $t, h (rd <- rt >> h, PC <- PC + 1) - shiftare la dreapta cu semn
+
+SRA $5, $5, 1 -> B"000_000_101_101_1_111"
+
+3. BGEZ  $s, offset     if rs >= 0
+					    	PC <- PC + 1 + offset
+					    else
+					    	PC <- PC + 1
+							
+BGEZ $5, -6 -> B"101_101_001_1111010" - daca R5 e mai mare sau egal cu 0, sare inapoi cu 5 instructiuni
+
+4. BGTZ  $s, offset     if rs > 0
+					    	PC <- PC + 1 + offset
+					    else
+					    	PC <- PC + 1
+							
+BGEZ $5, -7 -> B"110_011_000_1111001" - daca R3 e mai mare decat 0, sare inapoi cu 6 instructiuni

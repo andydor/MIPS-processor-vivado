@@ -1,0 +1,5 @@
+Dorofte Andrei, grupa 302210
+
+Am modificat si implementat mips16 pipeline, nu am intampinat probleme, nu am placuta pentru a testa.
+
+Pentru a implementa operatiile de Branch on greater than or equal to zero si Branch on greater than zero, am adaugat flag-urile necesare (GT, GE) in unitatea EX si in unitatea UC, dupa care acestea, la fel ca la mips16 single cycle, intra cate doua in cate o poarta si, dupa care rezultatele intr-o poarta sau, impreuna cu rezultatul unei porti si al flag-urilor zero si branch. Rezultatul final al portii sau reprezinta semnalul pcsrc.
